@@ -52,3 +52,31 @@ fig.tight_layout()
 fig.savefig(os.path.join(out_dir, "wing_cp_topdown.png"), dpi=150)
 plt.close(fig)
 print("Saved wing_cp_topdown.png")
+
+# ── Top-down Cp with station lines overlaid ────────────────────────────────
+# Mesh spanwise eta values nearest to experiment stations
+# span_eta[j] for j=3,8,13,17,22,28,30 → 0.196,0.454,0.666,0.793,0.900,0.965,0.977
+station_eta_exp  = [0.20, 0.44, 0.65, 0.80, 0.90, 0.96, 0.99]
+station_eta_mesh = [0.196, 0.454, 0.666, 0.793, 0.900, 0.965, 0.977]
+
+fig2, ax2 = plt.subplots(figsize=(10, 7))
+tc2 = ax2.tricontourf(x_norm[upper], eta[upper], Cp[upper],
+                      levels=50, cmap="coolwarm_r", vmin=-1.2, vmax=0.3)
+cb2 = fig2.colorbar(tc2, ax=ax2, label="$C_p$", orientation="vertical",
+                    fraction=0.03, pad=0.02, extend="neither")
+
+for eta_m, eta_e in zip(station_eta_mesh, station_eta_exp):
+    ax2.axhline(eta_m, color="k", lw=0.8, ls="--", alpha=0.7)
+    ax2.text(1.01, eta_m, f"η={eta_e:.2f}", va="center", ha="left",
+             fontsize=8, color="k")
+
+ax2.set_xlabel("x/c")
+ax2.set_ylabel("2y/b  (spanwise fraction)")
+ax2.set_xlim(0, 1)
+ax2.set_ylim(0, 1)
+ax2.set_title("ONERA M6 Upper Surface $C_p$  —  Validation Stations  (Ma=0.84, α=3.06°)")
+fig2.tight_layout()
+fig2.savefig(os.path.join(out_dir, "wing_cp_stations_overlay.png"), dpi=150,
+             bbox_inches="tight")
+plt.close(fig2)
+print("Saved wing_cp_stations_overlay.png")

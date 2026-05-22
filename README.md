@@ -82,6 +82,14 @@ AUSMPlusUp provides good shock capturing at transonic Mach numbers without the e
 
 ## Results
 
+### Validation Station Locations
+
+<img src="wing_cp_stations_overlay.png" width="900"/>
+
+Dashed lines mark the seven spanwise stations at which CFD is compared against the Schmitt & Charpin (1979) experiment. The lambda shock double-recompression pattern is visible in the Cp field — the two dark bands of pressure recovery converging toward the tip. Stations are evenly distributed from η = 0.20 (inner semi-span) to η = 0.99 (tip).
+
+---
+
 ### Mach Contours — Root Section (z = 0)
 
 <img src="mach_root_section.png" width="900"/>
