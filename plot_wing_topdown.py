@@ -65,9 +65,10 @@ tc2 = ax2.tricontourf(x_norm[upper], eta[upper], Cp[upper],
 cb2 = fig2.colorbar(tc2, ax=ax2, label="$C_p$", orientation="vertical",
                     fraction=0.03, pad=0.12, extend="neither")
 
-for eta_m, eta_e in zip(station_eta_mesh, station_eta_exp):
+label_offsets = [0, 0, 0, 0, 0, -0.012, 0.012]  # nudge eta=0.96 down, 0.99 up
+for eta_m, eta_e, off in zip(station_eta_mesh, station_eta_exp, label_offsets):
     ax2.axhline(eta_m, color="k", lw=0.8, ls="--", alpha=0.7)
-    ax2.text(1.01, eta_m, f"η={eta_e:.2f}", va="center", ha="left",
+    ax2.text(1.01, eta_m + off, f"η={eta_e:.2f}", va="center", ha="left",
              fontsize=8, color="k")
 
 ax2.set_xlabel("x/c")
