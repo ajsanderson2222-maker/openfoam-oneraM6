@@ -1,0 +1,21 @@
+# OpenFOAM time directories (keep 0.org and t=2000)
+simulation/[0-9]*/
+simulation/[0-9]*.[0-9]*/
+!simulation/0.org/
+!simulation/2000/
+
+# Processor directories
+simulation/processor*/
+
+# Logs and foamLog
+simulation/log.*
+simulation/foamLog.db.*
+
+# Mesh symlinks generated at runtime
+simulation/constant/polyMesh/boundary
+simulation/constant/polyMesh/faces
+simulation/constant/polyMesh/neighbour
+simulation/constant/polyMesh/owner
+simulation/constant/polyMesh/points
+simulation/postProcessing/
+mesh/log.*
