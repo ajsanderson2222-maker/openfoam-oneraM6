@@ -98,12 +98,6 @@ The upper surface Cp distribution shows the characteristic ONERA M6 double-shock
 
 ---
 
-### Wing Surface Cp — 3D View
-
-<img src="wing_cp_3d.png" width="900"/>
-
----
-
 ## Validation — Cp Spanwise Stations
 
 Pressure coefficient distributions at seven spanwise stations are compared against the Schmitt & Charpin (1979) wind tunnel measurements (AGARD AR-138, Run 308, Ma = 0.8395, α = 3.06°). CFD lines are solid; experiment symbols are open markers.
