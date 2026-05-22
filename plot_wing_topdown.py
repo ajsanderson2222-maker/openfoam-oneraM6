@@ -63,7 +63,7 @@ fig2, ax2 = plt.subplots(figsize=(10, 7))
 tc2 = ax2.tricontourf(x_norm[upper], eta[upper], Cp[upper],
                       levels=50, cmap="coolwarm_r", vmin=-1.2, vmax=0.3)
 cb2 = fig2.colorbar(tc2, ax=ax2, label="$C_p$", orientation="vertical",
-                    fraction=0.03, pad=0.02, extend="neither")
+                    fraction=0.03, pad=0.12, extend="neither")
 
 for eta_m, eta_e in zip(station_eta_mesh, station_eta_exp):
     ax2.axhline(eta_m, color="k", lw=0.8, ls="--", alpha=0.7)
