@@ -134,7 +134,7 @@ The double shock is now prominent: two distinct recompression jumps visible on b
 
 <img src="cp_station_80.png" width="700"/>
 
-Strong agreement. The lambda shock system is fully developed. The supersonic plateau (Cp ≈ −0.65 to −0.70) and both shock feet are matched within the scatter of the experiment.
+The lambda shock system is fully developed at this station. CFD captures the leading suction peak and the general pressure level well, but misses the distinct pressure drop measured experimentally around x/c = 0.25–0.40. The experiment shows a clear second shock foot in this region — the rearward leg of the lambda shock — while the CFD smears this feature into a gradual recovery ramp. This is a known deficiency of Spalart–Allmaras RANS: the model over-diffuses the shock-shock interaction zone, preventing the sharp recompression from forming cleanly. Shock location is reasonable but the lambda shock structure is not fully resolved.
 
 ---
 
@@ -171,7 +171,7 @@ The discrepancy at this station is consistent with the CFD validation literature
 | 0.20 | Excellent | Full chord match |
 | 0.44 | Good | Shock slightly aft |
 | 0.65 | Good | Double shock resolved |
-| 0.80 | Very good | Lambda shock well captured |
+| 0.80 | Fair | Lambda shock smeared; second shock foot missed x/c=0.25–0.40 |
 | 0.90 | Good | Post-shock recovery slightly steep |
 | 0.96 | Fair | Tip effects growing |
 | 0.99 | Poor (expected) | Tip vortex dominates; RANS limitation |
